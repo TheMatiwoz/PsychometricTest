@@ -8,47 +8,91 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//TODO
+//rounded traffics in test 1
+
+
+
 namespace PsychometricTest
 {
     public partial class Form1 : Form
     {
-        private static long[] _globalneWyniki = new long[3];
-        public static long[] globalneWyniki
+        //List<int> wynikiTest1 = new List<int>();
+        private static long[] _globalResults = new long[3];
+
+        public static long[] globalResults
         {
             get
             {
-                return _globalneWyniki;
+                return _globalResults;
             }
             set
             {
-                _globalneWyniki = value;
+                _globalResults = value;
             }
         }
         
-
-        List<int> wynikiTest1 = new List<int>();
         public Form1()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle; //restrict from resizing
+            MaximizeBox = false;  //disable maximize button
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void test1_Click(object sender, EventArgs e)
         {
             Test1 test1 = new Test1();
             test1.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-            System.Console.WriteLine("Wyniki: "+globalneWyniki[0].ToString()+ " 2: " + globalneWyniki[1] );
-            //globalneWyniki.ForEach(Console.WriteLine);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void test2_Click(object sender, EventArgs e)
         {
             Test2 test2 = new Test2();
             test2.ShowDialog();
+        }
+
+        private void results_Click(object sender, EventArgs e)
+        {
+            System.Console.WriteLine("Wyniki: " + globalResults[0].ToString() + " 2: " + globalResults[1]);
+        }
+
+        private void oProjekcieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectInfoForm projectInfoForm = new ProjectInfoForm();
+            projectInfoForm.ShowDialog();
+        }
+
+        private void oTworcachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutUsForm aboutUsForm = new AboutUsForm();
+            aboutUsForm.ShowDialog();
+        }
+
+        private void wyjdzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)  //event when form closing
+        {
+            base.OnFormClosing(e);
+            if (closeCancel() == false)
+            {
+                e.Cancel = true;
+            };
+        }
+
+        public static bool closeCancel()
+        {
+            const string message = "Czy jestes pewny, ze chcesz zamknac aplikacje?";
+            const string caption = "Zamknij aplikacje";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            { return true; }
+            else
+            { return false; }
         }
     }
 }

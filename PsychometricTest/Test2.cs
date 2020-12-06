@@ -17,10 +17,19 @@ namespace PsychometricTest
         private List<PictureBox> pictureBox = new List<PictureBox>();
         private long timeDiff;
         private long time;
-        private List<long> wyniki = new List<long>();
+        private List<long> results = new List<long>();
+
         public Test2()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle; //restrict from resizing
+            MaximizeBox = false;  //disable maximize button
+            initializePictureBoxList();
+            turnOnDiode();
+        }
+
+        private void initializePictureBoxList()
+        {
             pictureBox.Add(pictureBox1);
             pictureBox.Add(pictureBox2);
             pictureBox.Add(pictureBox3);
@@ -29,7 +38,6 @@ namespace PsychometricTest
             pictureBox.Add(pictureBox6);
             pictureBox.Add(pictureBox7);
             pictureBox.Add(pictureBox8);
-            turnOnDiode();
         }
 
         private async void turnOnDiode()
@@ -41,9 +49,6 @@ namespace PsychometricTest
             pictureBox[leftDiode].BackColor = Color.Red;
             pictureBox[bottomDiode].BackColor = Color.Red;
             time = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-
-
-
         }
 
 
@@ -57,18 +62,18 @@ namespace PsychometricTest
                 Console.WriteLine(DateTimeOffset.Now.ToUnixTimeMilliseconds() + " " + time);
                 timeDiff = DateTimeOffset.Now.ToUnixTimeMilliseconds() - time;
                 turnOnDiode();
-                wyniki.Add(timeDiff);
+                results.Add(timeDiff);
                 wynikiLenght();
             }
         }
 
         private async void wynikiLenght()
         {
-            if (wyniki.Count >= 7)
+            if (results.Count >= 7)
             {
                 await Task.Delay(1500);
-                Form1.globalneWyniki[1] = avg();
-                wyniki.ForEach(Console.WriteLine);
+                Form1.globalResults[1] = avg();
+                results.ForEach(Console.WriteLine);
 
                 this.Close();
             }
@@ -77,11 +82,11 @@ namespace PsychometricTest
         private long avg()
         {
             long suma = 0;
-            foreach(var wynik in wyniki)
+            foreach(var wynik in results)
             {
                 suma += wynik;
             }
-            return suma / wyniki.Count;
+            return suma / results.Count;
         }
     }
 }
