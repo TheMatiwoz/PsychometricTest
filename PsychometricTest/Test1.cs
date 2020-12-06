@@ -46,15 +46,26 @@ namespace PsychometricTest
                 buttonColor();
             }
         }
-        private void wynikiLenght()
+        private async void wynikiLenght()
         {
-            if(wyniki.Count >= 5)
+            if (wyniki.Count >= 5)
             {
-                Form1.globalneWyniki = wyniki;
+                await Task.Delay(1500);
+                Form1.globalneWyniki[0] = avg();
                 wyniki.ForEach(Console.WriteLine);
 
                 this.Close();
             }
+        }
+
+        private long avg()
+        {
+            long suma = 0;
+            foreach (var wynik in wyniki)
+            {
+                suma += wynik;
+            }
+            return suma / wyniki.Count;
         }
 
         private async void buttonColor()

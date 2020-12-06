@@ -12,8 +12,8 @@ namespace PsychometricTest
 {
     public partial class Form1 : Form
     {
-        private static List<long> _globalneWyniki;
-        public static List<long> globalneWyniki
+        private static long[] _globalneWyniki = new long[3];
+        public static long[] globalneWyniki
         {
             get
             {
@@ -40,7 +40,15 @@ namespace PsychometricTest
 
         private void button4_Click(object sender, EventArgs e)
         {
-            globalneWyniki.ForEach(Console.WriteLine);
+           
+            System.Console.WriteLine("Wyniki: "+globalneWyniki[0].ToString()+ " 2: " + globalneWyniki[1] );
+            //globalneWyniki.ForEach(Console.WriteLine);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Test2 test2 = new Test2();
+            test2.ShowDialog();
         }
     }
 }
