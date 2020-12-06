@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 
 //TODO
+//better shape of Form1
 //rounded traffics in test 1
 
 
@@ -18,7 +19,6 @@ namespace PsychometricTest
 {
     public partial class Form1 : Form
     {
-        //List<int> wynikiTest1 = new List<int>();
         private static long[] _globalResults = new long[3];
 
         public static long[] globalResults
@@ -50,6 +50,12 @@ namespace PsychometricTest
         {
             Test2 test2 = new Test2();
             test2.ShowDialog();
+        }
+
+        private void test3_Click(object sender, EventArgs e)
+        {
+            Test3 test3 = new Test3();
+            test3.ShowDialog();
         }
 
         private void results_Click(object sender, EventArgs e)

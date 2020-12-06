@@ -71,6 +71,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "TEST 3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.test3_Click);
             // 
             // button4
             // 
@@ -108,21 +109,21 @@
             // oProjekcieToolStripMenuItem
             // 
             this.oProjekcieToolStripMenuItem.Name = "oProjekcieToolStripMenuItem";
-            this.oProjekcieToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.oProjekcieToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.oProjekcieToolStripMenuItem.Text = "O projekcie";
             this.oProjekcieToolStripMenuItem.Click += new System.EventHandler(this.oProjekcieToolStripMenuItem_Click);
             // 
             // oTworcachToolStripMenuItem
             // 
             this.oTworcachToolStripMenuItem.Name = "oTworcachToolStripMenuItem";
-            this.oTworcachToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.oTworcachToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.oTworcachToolStripMenuItem.Text = "O tworcach";
             this.oTworcachToolStripMenuItem.Click += new System.EventHandler(this.oTworcachToolStripMenuItem_Click);
             // 
             // wyjdzToolStripMenuItem
             // 
             this.wyjdzToolStripMenuItem.Name = "wyjdzToolStripMenuItem";
-            this.wyjdzToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.wyjdzToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.wyjdzToolStripMenuItem.Text = "Wyjdz";
             this.wyjdzToolStripMenuItem.Click += new System.EventHandler(this.wyjdzToolStripMenuItem_Click);
             // 
