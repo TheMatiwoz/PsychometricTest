@@ -12,6 +12,7 @@ using System.Windows.Forms;
 namespace PsychometricTest
 {
     //5-fold measurement
+    //2-trial attempts
     public partial class Test3 : Form
     {
         private readonly int numberOfMeasurements = 5;

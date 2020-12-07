@@ -34,7 +34,7 @@
             this.startButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new PsychometricTest.RoundButton();
             this.pictureBox2 = new PsychometricTest.RoundButton();
-            this.roundButton3 = new PsychometricTest.RoundButton();
+            this.pictureBox3 = new PsychometricTest.RoundButton();
             this.SuspendLayout();
             // 
             // gaz
@@ -97,21 +97,21 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.UseVisualStyleBackColor = false;
             // 
-            // roundButton3
+            // pictureBox3
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.Black;
-            this.roundButton3.Location = new System.Drawing.Point(294, 267);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(80, 75);
-            this.roundButton3.TabIndex = 16;
-            this.roundButton3.UseVisualStyleBackColor = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Location = new System.Drawing.Point(294, 267);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 75);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.UseVisualStyleBackColor = false;
             // 
             // Test1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 590);
-            this.Controls.Add(this.roundButton3);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.startButton);
@@ -132,6 +132,6 @@
         private System.Windows.Forms.Button startButton;
         private RoundButton pictureBox1;
         private RoundButton pictureBox2;
-        private RoundButton roundButton3;
+        private RoundButton pictureBox3;
     }
 }

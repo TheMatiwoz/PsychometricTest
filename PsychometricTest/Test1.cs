@@ -7,15 +7,18 @@ using System.Windows.Forms;
 
 namespace PsychometricTest
 {
+    //5-fold measurement
+    //2-trial attempts
     public partial class Test1 : Form
     {
+        private readonly int numberOfMainAttempts = 5;
+        private readonly int totalNumberOfAttempts = 7;
         private int buttonNumber;
         private long time;
         private long timeDiff;
         private List<long> results = new List<long>(); //each next result of current test is ovewritten on the latest one
-        private int currentTest = 0;   //0 is trial, 1 is main
-        private Boolean isReadyToStartMainAttempt = true;
-        private Boolean mainTestIsAlreadyRunning = false;
+        private Boolean firstTime = true;
+        private Boolean isTestRunning = false;
 
         public Test1()
         {
@@ -40,19 +43,15 @@ namespace PsychometricTest
 
         private void startTrial_Click(object sender, EventArgs e)
         {
-            if (mainTestIsAlreadyRunning == false)
-            {
-                changeButtonColor();
-                if (currentTest >= 1)
-                mainTestIsAlreadyRunning = true;
-            }
+            changeButtonColor();
+            startButton.Enabled = false;
         }
 
         private void gas_Click(object sender, EventArgs e)
         {
-            if (roundButton3.BackColor == Color.Green)
+            if (pictureBox3.BackColor == Color.Green)
             {
-                roundButton3.BackColor = Color.Black;
+                pictureBox3.BackColor = Color.Black;
                 Console.WriteLine(DateTimeOffset.Now.ToUnixTimeMilliseconds() + " " + time);
                 timeDiff = DateTimeOffset.Now.ToUnixTimeMilliseconds() - time;
                 results.Add(timeDiff);
@@ -74,20 +73,22 @@ namespace PsychometricTest
 
         private void addToTotalMeasurements ()
         {
-            if (results.Count >= 5)
+            if (results.Count >= (totalNumberOfAttempts - numberOfMainAttempts))
             {
-                if (results.Count >= 10)
+                if (results.Count >= totalNumberOfAttempts)
                 {
                     Form1.globalResults[0] = avg();
+                    isTestRunning = false;
                     this.Close();
                 }
-                else if (isReadyToStartMainAttempt)
+                else if (results.Count % (totalNumberOfAttempts - numberOfMainAttempts) == 0 && firstTime)
                 {
                     InitializeMainAttemptLabel();
                     pictureBox1.BackColor = Color.Black;
                     pictureBox2.BackColor = Color.Black;
-                    roundButton3.BackColor = Color.Black;
-                    isReadyToStartMainAttempt = false;
+                    pictureBox3.BackColor = Color.Black;
+                    firstTime = false;
+                    startButton.Enabled = true;
                 }
             }
         }
@@ -95,7 +96,7 @@ namespace PsychometricTest
         private long avg()
         {
             long sum = 0;
-            foreach (var result in results.Skip(Math.Max(0, results.Count() - 5)))
+            foreach (var result in results.Skip(Math.Max(0, results.Count() - numberOfMainAttempts)))
             {
                 sum += result;
             }
@@ -121,10 +122,18 @@ namespace PsychometricTest
             }
             else if (buttonNumber == 2)
             {
-                roundButton3.BackColor = Color.Green;
+                pictureBox3.BackColor = Color.Green;
                 time = DateTimeOffset.Now.ToUnixTimeMilliseconds();
             }
             addToTotalMeasurements();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (isTestRunning)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
