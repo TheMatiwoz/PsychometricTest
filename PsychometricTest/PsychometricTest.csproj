@@ -64,6 +64,9 @@
     <Compile Include="ProjectInfoForm.Designer.cs">
       <DependentUpon>ProjectInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Test2.cs">
       <SubType>Form</SubType>
     </Compile>

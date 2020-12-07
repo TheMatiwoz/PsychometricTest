@@ -13,25 +13,11 @@ using System.Windows.Forms;
 //better shape of Form1
 //rounded traffics in test 1
 
-
-
 namespace PsychometricTest
 {
     public partial class Form1 : Form
     {
-        private static long[] _globalResults = new long[3];
-
-        public static long[] globalResults
-        {
-            get
-            {
-                return _globalResults;
-            }
-            set
-            {
-                _globalResults = value;
-            }
-        }
+        public static long[] globalResults { get; set; } = new long[3];
         
         public Form1()
         {
