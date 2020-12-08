@@ -13,7 +13,9 @@ namespace PsychometricTest
 {
     public partial class Results : Form
     {
-        List<Label> labels = new List<Label>();
+        private List<Label> labels = new List<Label>();
+        private int i = 0;
+        private String passed;
         public Results()
         {
             InitializeComponent();
@@ -35,8 +37,6 @@ namespace PsychometricTest
             labels.Add(label1);
             labels.Add(label2);
             labels.Add(label3);
-            int i = 0;
-            String passed;
             foreach(long test in Form1.globalResults)
             {
 
@@ -45,7 +45,7 @@ namespace PsychometricTest
                     passed = "ZALICZONY";
                     labels[i].ForeColor = Color.Green;
                 }
-                else if(test > 700)
+                else if(test > 900)
                 {
                     passed = "NIEZALICZONY";
                     labels[i].ForeColor = Color.Red;
