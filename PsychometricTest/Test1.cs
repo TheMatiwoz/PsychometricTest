@@ -43,8 +43,8 @@ namespace PsychometricTest
 
         private void startTrial_Click(object sender, EventArgs e)
         {
-            changeButtonColor();
             startButton.Enabled = false;
+            changeButtonColor();
         }
 
         private void gas_Click(object sender, EventArgs e)

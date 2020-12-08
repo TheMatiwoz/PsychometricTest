@@ -25,8 +25,8 @@ namespace PsychometricTest
             chart1.ChartAreas[0].AxisX.Title = "Numer testu";
             chart1.ChartAreas[0].AxisY.Title = "Czas[ms]";
             chart1.ChartAreas[0].AxisY.Minimum = 0;
-            chart1.ChartAreas[0].AxisY.Maximum = Math.Max(Form1.globalResults.Max() + 500, 3000);
-            chart1.ChartAreas[0].CursorY.Position = 700;
+            chart1.ChartAreas[0].AxisY.Maximum = Math.Max(Form1.globalResults.Max() + 300, 1000);
+            chart1.ChartAreas[0].CursorY.Position = 900;
             chart1.Series["Wyniki testów"].IsValueShownAsLabel = true;
             chart1.Series["Wyniki testów"].Points.DataBindY(Form1.globalResults);
         }
@@ -40,7 +40,7 @@ namespace PsychometricTest
             foreach(long test in Form1.globalResults)
             {
 
-                if(test < 700 && test > 0)
+                if(test < 900 && test > 0)
                 {
                     passed = "ZALICZONY";
                     labels[i].ForeColor = Color.Green;
