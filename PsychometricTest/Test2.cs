@@ -79,19 +79,17 @@ namespace PsychometricTest
 
         private void button_Click(object sender, EventArgs e)
         {
-            Beginning:
-                Button button = (Button)sender;
-                if (pictureBox[leftDiode].BackColor == Color.Red && pictureBox[bottomDiode].BackColor ==
-                    Color.Red && button.Tag.ToString() == (leftDiode.ToString()+bottomDiode.ToString()))
-                {
-                    pictureBox[leftDiode].BackColor = Color.Black;
-                    pictureBox[bottomDiode].BackColor = Color.Black;
-                    //Console.WriteLine(DateTimeOffset.Now.ToUnixTimeMilliseconds() + " " + time);
-                    timeDiff = DateTimeOffset.Now.ToUnixTimeMilliseconds() - time;
-                    results.Add(timeDiff);
-                    addToTotalMeasurements();
-                    if (results.Count == (totalNumberOfAttempts - numberOfMainAttempts)) { goto Beginning; }
-                    turnOnDiode();
+            Button button = (Button)sender;
+            if (pictureBox[leftDiode].BackColor == Color.Red && pictureBox[bottomDiode].BackColor ==
+                Color.Red && button.Tag.ToString() == (leftDiode.ToString()+bottomDiode.ToString()))
+            {
+                pictureBox[leftDiode].BackColor = Color.Black;
+                pictureBox[bottomDiode].BackColor = Color.Black;
+                timeDiff = DateTimeOffset.Now.ToUnixTimeMilliseconds() - time;
+                results.Add(timeDiff);
+                addToTotalMeasurements();
+                if (results.Count != (totalNumberOfAttempts - numberOfMainAttempts))
+                turnOnDiode();
             }
         }
 

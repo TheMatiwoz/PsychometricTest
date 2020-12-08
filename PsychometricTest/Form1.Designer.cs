@@ -138,7 +138,8 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PsychometricTest.Properties.Resources.checkedBackground;
+            this.BackgroundImage = global::PsychometricTest.Properties.Resources.car;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(728, 428);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

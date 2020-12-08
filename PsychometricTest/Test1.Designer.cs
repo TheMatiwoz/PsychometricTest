@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PsychometricTest.Properties.Resources.checkedBackground;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(666, 588);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

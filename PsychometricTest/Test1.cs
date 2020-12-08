@@ -75,7 +75,7 @@ namespace PsychometricTest
         {
             if (results.Count >= (totalNumberOfAttempts - numberOfMainAttempts))
             {
-                if (results.Count >= totalNumberOfAttempts)
+                if (results.Count >= totalNumberOfAttempts+1)
                 {
                     Form1.globalResults[0] = avg();
                     isTestRunning = false;
@@ -88,6 +88,7 @@ namespace PsychometricTest
                     pictureBox1.BackColor = Color.Black;
                     pictureBox2.BackColor = Color.Black;
                     pictureBox3.BackColor = Color.Black;
+                    results.Add(0);  //adding due to the bug when value stays on 2nd
                     firstTime = false;
                     startButton.Enabled = true;
                 }
@@ -118,7 +119,6 @@ namespace PsychometricTest
                 pictureBox2.BackColor = Color.Orange;
                 await Task.Delay(new Random().Next(500, 2000));
                 pictureBox2.BackColor = Color.Black;
-                addToTotalMeasurements();
                 if (results.Count != (totalNumberOfAttempts-numberOfMainAttempts))
                 {
                     changeButtonColor();

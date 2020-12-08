@@ -16,9 +16,12 @@ namespace PsychometricTest
         private List<Label> labels = new List<Label>();
         private int i = 0;
         private String passed;
+
         public Results()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle; //restrict from resizing
+            MaximizeBox = false;  //disable maximize button
             InitializeDescriptionLabel();
         }
 
@@ -56,10 +59,9 @@ namespace PsychometricTest
                 }
                 labels[i].Text = "Wynik testu " + (i + 1) + ":  " + passed;
                 i++;
-            }
-            
-            
+            }     
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
