@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 208);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 80);
@@ -77,7 +78,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 233);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 302);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(89, 80);
@@ -87,7 +88,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 341);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 410);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(89, 80);
@@ -97,7 +98,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 445);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 514);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(89, 80);
@@ -107,7 +108,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
-            this.pictureBox5.Location = new System.Drawing.Point(139, 541);
+            this.pictureBox5.Location = new System.Drawing.Point(138, 610);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(89, 80);
@@ -117,7 +118,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
-            this.pictureBox6.Location = new System.Drawing.Point(252, 541);
+            this.pictureBox6.Location = new System.Drawing.Point(251, 610);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(89, 80);
@@ -127,7 +128,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Black;
-            this.pictureBox7.Location = new System.Drawing.Point(373, 541);
+            this.pictureBox7.Location = new System.Drawing.Point(372, 610);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(89, 80);
@@ -137,7 +138,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
-            this.pictureBox8.Location = new System.Drawing.Point(490, 541);
+            this.pictureBox8.Location = new System.Drawing.Point(489, 610);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(89, 80);
@@ -146,7 +147,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(139, 139);
+            this.button1.Location = new System.Drawing.Point(138, 208);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 80);
@@ -157,7 +158,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(252, 139);
+            this.button2.Location = new System.Drawing.Point(251, 208);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 80);
@@ -168,7 +169,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(373, 139);
+            this.button3.Location = new System.Drawing.Point(372, 208);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 80);
@@ -179,7 +180,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(490, 139);
+            this.button4.Location = new System.Drawing.Point(489, 208);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 80);
@@ -190,7 +191,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(139, 233);
+            this.button5.Location = new System.Drawing.Point(138, 302);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 80);
@@ -201,7 +202,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(252, 233);
+            this.button6.Location = new System.Drawing.Point(251, 302);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(89, 80);
@@ -212,7 +213,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(373, 233);
+            this.button7.Location = new System.Drawing.Point(372, 302);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 80);
@@ -223,7 +224,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(490, 233);
+            this.button8.Location = new System.Drawing.Point(489, 302);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(89, 80);
@@ -234,7 +235,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(139, 341);
+            this.button9.Location = new System.Drawing.Point(138, 410);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(89, 80);
@@ -245,7 +246,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(252, 341);
+            this.button10.Location = new System.Drawing.Point(251, 410);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(89, 80);
@@ -256,7 +257,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(373, 341);
+            this.button11.Location = new System.Drawing.Point(372, 410);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(89, 80);
@@ -267,7 +268,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(490, 341);
+            this.button12.Location = new System.Drawing.Point(489, 410);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(89, 80);
@@ -278,7 +279,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(139, 449);
+            this.button13.Location = new System.Drawing.Point(138, 518);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(89, 80);
@@ -289,7 +290,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(252, 449);
+            this.button14.Location = new System.Drawing.Point(251, 518);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(89, 80);
@@ -300,7 +301,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(373, 449);
+            this.button15.Location = new System.Drawing.Point(372, 518);
             this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(89, 80);
@@ -311,7 +312,7 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(490, 449);
+            this.button16.Location = new System.Drawing.Point(489, 518);
             this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(89, 80);
@@ -322,16 +323,18 @@
             // 
             // test2Label
             // 
-            this.test2Label.Location = new System.Drawing.Point(21, 13);
+            this.test2Label.BackColor = System.Drawing.Color.Transparent;
+            this.test2Label.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.test2Label.Location = new System.Drawing.Point(17, 15);
             this.test2Label.Name = "test2Label";
-            this.test2Label.Size = new System.Drawing.Size(562, 107);
+            this.test2Label.Size = new System.Drawing.Size(561, 123);
             this.test2Label.TabIndex = 24;
             this.test2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // startTest2Button
             // 
             this.startTest2Button.BackColor = System.Drawing.Color.Green;
-            this.startTest2Button.Location = new System.Drawing.Point(504, 90);
+            this.startTest2Button.Location = new System.Drawing.Point(504, 141);
             this.startTest2Button.Name = "startTest2Button";
             this.startTest2Button.Size = new System.Drawing.Size(79, 37);
             this.startTest2Button.TabIndex = 25;
@@ -343,7 +346,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 640);
+            this.BackgroundImage = global::PsychometricTest.Properties.Resources.checkedBackground;
+            this.ClientSize = new System.Drawing.Size(595, 705);
             this.Controls.Add(this.startTest2Button);
             this.Controls.Add(this.test2Label);
             this.Controls.Add(this.button16);
@@ -370,6 +374,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Test2";
             this.Text = "Form2";

@@ -27,5 +27,10 @@ namespace PsychometricTest
                 "Po wykonaniu wszystkich testów istnieje możliwość sprawdzenia wyników - w formie syntetycznej oraz analitycznej.";
             this.projectInfoLabel1.Text = text;
         }
+
+        private void ProjectInfoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

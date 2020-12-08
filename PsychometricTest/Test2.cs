@@ -104,6 +104,7 @@ namespace PsychometricTest
                     Form1.globalResults[1] = avg();
                     //results.ForEach(Console.WriteLine);
                     isTestRunning = false;
+                    Form1.testButtons[1].BackColor = Color.Gray;
                     this.Close();
                 }
                 else if (results.Count % (totalNumberOfAttempts-numberOfMainAttempts) == 0 && firstTime)

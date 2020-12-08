@@ -18,7 +18,7 @@ namespace PsychometricTest
         private long timeDiff;
         private List<long> results = new List<long>(); //each next result of current test is ovewritten on the latest one
         private Boolean firstTime = true;
-        private Boolean isTestRunning = false;
+        private Boolean isTestRunning = true;
 
         public Test1()
         {
@@ -79,6 +79,7 @@ namespace PsychometricTest
                 {
                     Form1.globalResults[0] = avg();
                     isTestRunning = false;
+                    Form1.testButtons[0].BackColor = Color.Gray;
                     this.Close();
                 }
                 else if (results.Count % (totalNumberOfAttempts - numberOfMainAttempts) == 0 && firstTime)
@@ -118,7 +119,10 @@ namespace PsychometricTest
                 await Task.Delay(new Random().Next(500, 2000));
                 pictureBox2.BackColor = Color.Black;
                 addToTotalMeasurements();
-                changeButtonColor();
+                if (results.Count != (totalNumberOfAttempts-numberOfMainAttempts))
+                {
+                    changeButtonColor();
+                }
             }
             else if (buttonNumber == 2)
             {

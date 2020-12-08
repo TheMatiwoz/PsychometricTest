@@ -46,8 +46,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 230);
             this.Controls.Add(this.projectInfoLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProjectInfoForm";
             this.Text = "Info";
+            this.Load += new System.EventHandler(this.ProjectInfoForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -93,6 +93,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInfoForm.resx">
+      <DependentUpon>ProjectInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test2.resx">
       <DependentUpon>Test2.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +140,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="checkedBackground.png" />
     <Content Include="Properties\alarmSound.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

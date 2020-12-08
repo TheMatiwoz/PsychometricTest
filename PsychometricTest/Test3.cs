@@ -33,19 +33,20 @@ namespace PsychometricTest
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedSingle; //restrict from resizing
             MaximizeBox = false;  //disable maximize button
+            button1.Enabled = false;
             InitializeDescriptionLabel();
         }
 
         private void InitializeDescriptionLabel()
         {
-            test3Label.Text = "Znajdujesz się w fazie szkoleniowej. Po uslyszeniu dzwieku kliknij jak najszybciej w przycisk."+
+            test3Label.Text = "Znajdujesz się w fazie szkoleniowej. Po uslyszeniu dzwieku kliknij jak najszybciej w przycisk STOP. "+
                 "Proba zostanie wykonana pieciokrotnie. Kliknij przycisk " +
                 "START aby rozpoczac probe testowa.";
         }
 
         private void InitializeMainAttemptLabel()
         {
-            test3Label.Text = "Znajdujesz się w testowej. Naciśnij przycisk START aby rozpoczac test.";
+            test3Label.Text = "Znajdujesz się w testowej. Nacisnij przycisk START aby rozpoczac test.";
         }
 
         private void onStart_Click(object sender, EventArgs e)
@@ -91,6 +92,7 @@ namespace PsychometricTest
                     //results.ForEach(Console.WriteLine);
                     isTestRunning = false;
                     soundPlayer.Stop();
+                    Form1.testButtons[2].BackColor = Color.Gray;
                     this.Close();
                 }
                 else if (results.Count % (totalNumberOfAttempts - numberOfMainAttempts) == 0 && firstTime)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUsForm));
             this.labelMW = new System.Windows.Forms.Label();
             this.labelMS = new System.Windows.Forms.Label();
             this.pictureBoxMS = new System.Windows.Forms.PictureBox();
@@ -83,6 +84,7 @@
             this.Controls.Add(this.labelMW);
             this.Controls.Add(this.pictureBoxMS);
             this.Controls.Add(this.pictureBoxMW);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutUsForm";
             this.Text = "O nas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMS)).EndInit();
