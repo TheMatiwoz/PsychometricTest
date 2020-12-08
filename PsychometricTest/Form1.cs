@@ -50,7 +50,9 @@ namespace PsychometricTest
         //button WYNIKI should be enabled only if all of tests are already conducted
         private void results_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine("Wyniki: " + globalResults[0].ToString() + " 2: " + globalResults[1] + " 3: " + globalResults[3]);
+            System.Console.WriteLine("Wyniki: " + globalResults[0].ToString() + " 2: " + globalResults[1] + " 3: " + globalResults[2]);
+            Results results = new Results();
+            results.ShowDialog();
         }
 
         private void oProjekcieToolStripMenuItem_Click(object sender, EventArgs e)

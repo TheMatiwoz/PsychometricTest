@@ -67,7 +67,7 @@ namespace PsychometricTest
         private void stopMusic()
         {
             soundPlayer.Stop();
-            long timeDiff = time - DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            long timeDiff = DateTimeOffset.Now.ToUnixTimeMilliseconds() - time;
             results.Add(timeDiff);
         }
 

@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace PsychometricTest
+{
+    public partial class Results : Form
+    {
+        List<Label> labels = new List<Label>();
+        public Results()
+        {
+            InitializeComponent();
+            InitializeDescriptionLabel();
+        }
+
+        private void Results_Load(object sender, EventArgs e)
+        {
+            chart1.ChartAreas[0].AxisX.Title = "Numer testu";
+            chart1.ChartAreas[0].AxisY.Title = "Czas[ms]";
+            chart1.ChartAreas[0].AxisY.Minimum = 0;
+            chart1.ChartAreas[0].AxisY.Maximum = Math.Max(Form1.globalResults.Max() + 500, 3000);
+            chart1.ChartAreas[0].CursorY.Position = 700;
+            chart1.Series["Wyniki testów"].IsValueShownAsLabel = true;
+            chart1.Series["Wyniki testów"].Points.DataBindY(Form1.globalResults);
+        }
+        private void InitializeDescriptionLabel()
+        {
+            labels.Add(label1);
+            labels.Add(label2);
+            labels.Add(label3);
+            int i = 0;
+            String passed;
+            foreach(long test in Form1.globalResults)
+            {
+
+                if(test < 700 && test > 0)
+                {
+                    passed = "ZALICZONY";
+                    labels[i].ForeColor = Color.Green;
+                }
+                else if(test > 700)
+                {
+                    passed = "NIEZALICZONY";
+                    labels[i].ForeColor = Color.Red;
+                }
+                else
+                {
+                    passed = "TEST NIEZREALIZOWANY";
+                }
+                labels[i].Text = "Wynik testu " + (i + 1) + ":  " + passed;
+                i++;
+            }
+            
+            
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
